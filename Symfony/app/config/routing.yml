@@ -1,0 +1,4 @@
+gce_news:
+    resource: "@GCENewsBundle/Resources/config/routing.yml"
+    prefix:   /
+

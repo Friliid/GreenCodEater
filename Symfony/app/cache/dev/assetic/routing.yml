@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: 'C:/wamp/www/GreenCodEater/GreenCodEater/Symfony/app/config/routing_dev.yml'
