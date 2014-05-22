@@ -1,0 +1,3 @@
+ieps_cms_base_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: IepsCmsBaseBundle:Default:index }

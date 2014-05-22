@@ -614,10 +614,10 @@ class ap_DevDebugProjectContainer extends Container
         $c->setNamespace('sf2orm_default_1e0403a9fc340eca76afe240119d311b97d4c1350ac53f6499f35a104beae857');
 
         $d = new \Doctrine\ORM\Mapping\Driver\DriverChain();
-        $d->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($this->get('annotation_reader'), array(0 => 'C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\src\\GCE\\NewsBundle\\Entity')), 'GCE\\NewsBundle\\Entity');
+        $d->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($this->get('annotation_reader'), array(0 => 'C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\src\\Ieps\\CmsBaseBundle\\Entity')), 'Ieps\\CmsBaseBundle\\Entity');
 
         $e = new \Doctrine\ORM\Configuration();
-        $e->setEntityNamespaces(array('GCENewsBundle' => 'GCE\\NewsBundle\\Entity'));
+        $e->setEntityNamespaces(array('IepsCmsBaseBundle' => 'Ieps\\CmsBaseBundle\\Entity'));
         $e->setMetadataCacheImpl($a);
         $e->setQueryCacheImpl($b);
         $e->setResultCacheImpl($c);
@@ -2951,7 +2951,7 @@ class ap_DevDebugProjectContainer extends Container
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views', 'Twig');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\vendor\\symfony\\swiftmailer-bundle\\Symfony\\Bundle\\SwiftmailerBundle/Resources/views', 'Swiftmailer');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views', 'Doctrine');
-        $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\src\\GCE\\NewsBundle/Resources/views', 'GCENews');
+        $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\src\\Ieps\\CmsBaseBundle/Resources/views', 'IepsCmsBase');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3436,7 +3436,7 @@ class ap_DevDebugProjectContainer extends Container
                 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle',
                 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle',
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
-                'GCENewsBundle' => 'GCE\\NewsBundle\\GCENewsBundle',
+                'IepsCmsBaseBundle' => 'Ieps\\CmsBaseBundle\\IepsCmsBaseBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',

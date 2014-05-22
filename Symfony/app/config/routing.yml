@@ -1,4 +1,6 @@
-gce_news:
-    resource: "@GCENewsBundle/Resources/config/routing.yml"
+ieps_cms_base:
+    resource: "@IepsCmsBaseBundle/Resources/config/routing.yml"
     prefix:   /
+
+
 
