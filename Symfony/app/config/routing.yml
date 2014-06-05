@@ -1,3 +1,7 @@
+ieps_paypal:
+    resource: "@IepsPaypalBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ieps_cms_base:
     resource: "@IepsCmsBaseBundle/Resources/config/routing.yml"
     prefix:   /
