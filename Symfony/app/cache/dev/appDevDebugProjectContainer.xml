@@ -17,6 +17,7 @@
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="IepsCmsBaseBundle">Ieps\CmsBaseBundle\IepsCmsBaseBundle</parameter>
+      <parameter key="IepsPaypalBundle">Ieps\PaypalBundle\IepsPaypalBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -2308,7 +2309,9 @@
       <argument type="service">
         <service class="Doctrine\ORM\Configuration" public="false">
           <call method="setEntityNamespaces">
-            <argument type="collection"/>
+            <argument type="collection">
+              <argument key="IepsPaypalBundle">Ieps\PaypalBundle\Entity</argument>
+            </argument>
           </call>
           <call method="setMetadataCacheImpl">
             <argument type="service">
@@ -2339,7 +2342,19 @@
           </call>
           <call method="setMetadataDriverImpl">
             <argument type="service">
-              <service class="Doctrine\ORM\Mapping\Driver\DriverChain" public="false"/>
+              <service class="Doctrine\ORM\Mapping\Driver\DriverChain" public="false">
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
+                      <argument type="collection">
+                        <argument>C:\wamp\www\AvecLeSoleil\GreenCodEater\Symfony\src\Ieps\PaypalBundle\Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>Ieps\PaypalBundle\Entity</argument>
+                </call>
+              </service>
             </argument>
           </call>
           <call method="setProxyDir">
@@ -2720,6 +2735,10 @@
       <call method="addPath">
         <argument>C:\wamp\www\AvecLeSoleil\GreenCodEater\Symfony\src\Ieps\CmsBaseBundle/Resources/views</argument>
         <argument>IepsCmsBase</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\AvecLeSoleil\GreenCodEater\Symfony\src\Ieps\PaypalBundle/Resources/views</argument>
+        <argument>IepsPaypal</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp\www\AvecLeSoleil\GreenCodEater\Symfony\src\Acme\DemoBundle/Resources/views</argument>

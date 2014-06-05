@@ -1,3 +1,7 @@
+ieps_back_office:
+    resource: "@IepsBackOfficeBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ieps_paypal:
     resource: "@IepsPaypalBundle/Resources/config/routing.yml"
     prefix:   /

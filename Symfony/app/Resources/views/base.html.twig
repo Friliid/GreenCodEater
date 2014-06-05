@@ -4,6 +4,8 @@
         
         <meta charset="UTF-8" />
         
+        <link rel="stylesheet" href="{{ asset('paypal-button.min.js') }}">
+        
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -12,6 +14,14 @@
     <body>
         
         {% block content %}{% endblock %}
+        
+        
+        <p>Donnez des sous !</p>
+        <script src="paypal-button.min.js?merchant=legarsduweb-facilitator@hotmail.fr"
+    data-button="donate"
+    data-name="My product"
+    data-amount="1.00">
+        </script>
         
     </body>
 </html>

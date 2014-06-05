@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Ieps\CmsBaseBundle\IepsCmsBaseBundle(),
             new Ieps\PaypalBundle\IepsPaypalBundle(),
+            new Ieps\BackOfficeBundle\IepsBackOfficeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
