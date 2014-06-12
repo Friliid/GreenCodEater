@@ -18,6 +18,7 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="IepsCmsBaseBundle">Ieps\CmsBaseBundle\IepsCmsBaseBundle</parameter>
       <parameter key="IepsPaypalBundle">Ieps\PaypalBundle\IepsPaypalBundle</parameter>
+      <parameter key="IepsBackOfficeBundle">Ieps\BackOfficeBundle\IepsBackOfficeBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -2739,6 +2740,10 @@
       <call method="addPath">
         <argument>C:\wamp\www\AvecLeSoleil\GreenCodEater\Symfony\src\Ieps\PaypalBundle/Resources/views</argument>
         <argument>IepsPaypal</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\AvecLeSoleil\GreenCodEater\Symfony\src\Ieps\BackOfficeBundle/Resources/views</argument>
+        <argument>IepsBackOffice</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp\www\AvecLeSoleil\GreenCodEater\Symfony\src\Acme\DemoBundle/Resources/views</argument>

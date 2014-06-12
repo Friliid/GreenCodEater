@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Ieps\CmsBaseBundle\IepsCmsBaseBundle(),
             new Ieps\PaypalBundle\IepsPaypalBundle(),
             new Ieps\BackOfficeBundle\IepsBackOfficeBundle(),
+            new Ieps\UserBundle\IepsUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

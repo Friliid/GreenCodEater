@@ -1,3 +1,8 @@
-ieps_paypal_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: IepsPaypalBundle:Default:index }
+#ieps_paypal_payment:
+#    pattern:  /payments
+#    defaults: { _controller: IepsPaypalBundle:Default:... }
+    
+
+#ieps_paypal_payment_details:
+#    pattern:  /{id}/details
+#    defaults: { _controller: IepsPaypalBundle:Default:... }

@@ -10,5 +10,13 @@ ieps_cms_base:
     resource: "@IepsCmsBaseBundle/Resources/config/routing.yml"
     prefix:   /
 
+#login:
+#    pattern:   /login
+#    defaults:  { _controller: IepsUserBundle:Security:login }
 
+#login_check:
+#    pattern:   /login_check
+
+#logout:
+#    pattern:   /logout
 

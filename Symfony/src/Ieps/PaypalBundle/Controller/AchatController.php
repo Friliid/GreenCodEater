@@ -4,6 +4,9 @@ namespace Ieps\PaypalBundle\Controller;
  
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Ieps\PaypalBundle\Entity\Paypal;
+/**
+ * use Ieps\PaypalBundle\Entity\...
+ */
  
 /**
  * @Route("/payments")

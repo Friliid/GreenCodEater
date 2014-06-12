@@ -3,8 +3,10 @@ security:
         Symfony\Component\Security\Core\User\User: plaintext
 
     role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        # Un admin hérite des droits d'auteur et de modérateur      
+        ROLE_ADMIN:       [ROLE_AUTEUR, ROLE_MODERATEUR]       
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH] 
+        # On garde ce rôle superadmin, il nous resservira par la suite
 
     providers:
         in_memory:
@@ -17,22 +19,33 @@ security:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        
+        main_login:
+        # prendre /login (mais pas /login_check !)
+        pattern:   ^/login$
+        # On autorise alors les anonymes sur ce pare-feu
+        anonymous: true 
 
-        login:
-            pattern:  ^/demo/secured/login$
-            security: false
-
-        secured_area:
-            pattern:    ^/demo/secured/
+                
+        # Mise en place d'un parefeu (anonymous: true = tout les utilisateurs)  
+        main:
+            pattern:   ^/
+            anonymous: true
+            provider:  in_memory
             form_login:
-                check_path: _security_check
-                login_path: _demo_login
+              #route login
+                login_path: login
+              #route de validation du formulaire de connexion
+                check_path: login_check
             logout:
-                path:   _demo_logout
-                target: _demo
-            #anonymous: ~
-            #http_basic:
-            #    realm: "Secured Demo Area"
+              #rend possible la déconnexion
+                path:   logout
+                #URL vers laquelle sera redirigé le visiteur après sa déconnexion
+                target: /{slug}
+
 
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        
+        # sécuriser URL par IP ou par canal (http ou https)
+        #- { path: ^/admin, roles: ROLE_ADMIN, ip: 127.0.0.1, requires_channel: https }

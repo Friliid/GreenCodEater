@@ -1,3 +1,12 @@
-ieps_back_office_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: IepsBackOfficeBundle:Default:index }
+#ieps_back_office_rubrique_edit:
+#    pattern:  /{slug}/edit
+#    defaults: { _controller: IepsCmsBaseBundle:Rubrique:edit }
+
+#ieps_back_office_rubrique_ajout:
+#    pattern:  /{slug}/ajout
+#    defaults: { _controller: IepsCmsBaseBundle:Rubrique:ajout }
+
+  
+#ieps_back_office_rubrique_delete:
+#    pattern:  /{slug}/delete/{id}
+#    defaults: { _controller: IepsCmsBaseBundle:Rubrique:delete }

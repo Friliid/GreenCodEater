@@ -2953,6 +2953,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views', 'Doctrine');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\src\\Ieps\\CmsBaseBundle/Resources/views', 'IepsCmsBase');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\src\\Ieps\\PaypalBundle/Resources/views', 'IepsPaypal');
+        $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\src\\Ieps\\BackOfficeBundle/Resources/views', 'IepsBackOffice');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('C:\\wamp\\www\\AvecLeSoleil\\GreenCodEater\\Symfony\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3439,6 +3440,7 @@ class appDevDebugProjectContainer extends Container
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
                 'IepsCmsBaseBundle' => 'Ieps\\CmsBaseBundle\\IepsCmsBaseBundle',
                 'IepsPaypalBundle' => 'Ieps\\PaypalBundle\\IepsPaypalBundle',
+                'IepsBackOfficeBundle' => 'Ieps\\BackOfficeBundle\\IepsBackOfficeBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
